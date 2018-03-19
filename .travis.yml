@@ -1,2 +1,9 @@
 language: ruby
 
+env:
+	global:
+		- Company=Travis
+	matrix:
+		- Name=Kris
+		- Name=Dominic
+		- Name=Bianca
