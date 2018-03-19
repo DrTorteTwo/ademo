@@ -2,32 +2,28 @@ language: ruby
 env:
   global:
   - Company=Travis
+  - secure: E1It5XnyHsF1dAwfiwWaleJJI0SurwaZY4yAVwGLP3HvfDnSOFD+NhpadHCcCPCB4cvTQKNarUCCEmJWRG1G9Qan22bRg1UHRKoq+Ao8zOhSUIeIS2sArPOdgT9CB/ik2DQlqV8TZZXI4EG05Pj/OovRlLNSXdqIuc1RvSNAGLPcqGv/X8UG/tKClixzE4r40Gac8DkMdPfACmIm2SPBkF4wE5KVO6MtYYIhP4bqjqkVJ4AIpOqoRXoqcXpkcyHjk5ViKgUWs28haFoqG5LTzqecYJ44VcLkL7yGijq+yQvLzppNEB49GNtp0tcvHtl0DbUTK9tz7WPLVj79cjQDm8OYiUfDK9ouq8ZMpwfZZelfv13b4s7fY7HjZ6OJExTYxrEGUebZUQx5gXKdpGspis8gwmF7hXDuxcykIV4URIs6JNZt/UgaKSSG67hEx8rXsIpxZTstAuPHRiljgNV53tkpSdCrYAgVVhzG9LoRFCc5Nq6f8ucem+WSZkB8AxVTyr5Yi0ooTHE7aTIwcists+6LXMWINdCXgVVfzMa8/1TP2XBh/EtODtmsIrGoWSYR5yE/W8wMBl2azcbjwgwoxm9eoOxf6NMpORtXgA92W5dOamt/esObrznSj3rEqk8CDupW530yT+Act+1wHmbkbi2/AWRjT2lKt37bfU0s6pc=
   matrix:
   - Name=Kris
   - Name=Dominic
   - Name=Bianca
   - secure: co/yDCa+bZ1XamQYLlSqMbRLlDyc6BvFwguiBsCXROQw6CIfnNk/hWWPC9vjmZBxxunRQ+YccGvkgvYeDVNZ89M6DDA3FFTOlHHv2eVXJk1j2A95QfBtRajAeUkO3vntd35b0NPLAQ3Fj5HxYRhz+0S37Sd0x/Jqmx0pMbg7VdWRuZPDdCHPJMdFgHrURpzAoQClKnVJ8wq0HqsTjMrsfFDe1hH6DM/tyTHSC0YC8Hjv6+mKkBVIQEXviMDr+zJoJ5jlXRIkzgIWCW31Wv5s8Hp46sArUR9Hjb6dhdYcjtfmU8CxHqb0jUXCqx5PVbaOl8zETmTycBHjW0DRlHooSUw7/+nV5NLPp0IbEm2pm9YK+YZgQs4hb/qrJ5olu6PZYlsV8weNrNsGbIgNm2CWFN0fGXEzAg0dhbJyB6Qdcb2jueG9aBONIJF63K/aDiYUWv6c3zdsLizz5Ne7hp3eF0ZBSlEJCBsnaWE4TSlADwlgkf4laO9wSH+MGPebI7ArNuSyZhCF3kFM/Lcy1fJ4dP6Xovqt2JJfZRcco0ERdoJxxiTfkSzNuC34wwy+byZ4eeILQwP7yPMktBHeDeeGBDrZs+R946ZtOoXy1U9ZU5AVVCd9BnTP1WHLp/HmpLsyvOTKyOK4nTBGvUS/3C7/dquR/MdcApy53EJjcIJyl9w=
-
 addons:
   sauce_connect: true
-
 install:
-  - printenv
-  - echo "Hello!"
-
+- printenv
+- echo "Hello!"
 before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-  - rackup  # start a Web server
-  - sleep 3 # give Web server some time to bind to sockets, etc
-
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+- rackup
+- sleep 3
 script:
-  - ./script.sh
-  - printenv
-
+- "./script.sh"
+- printenv
+- echo $Microphone
 after_success:
-  - echo "Success!"
-
-after_failure: 
-  - echo "Failure!"
+- echo "Success!"
+after_failure:
+- echo "Failure!"
