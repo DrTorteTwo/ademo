@@ -1,9 +1,9 @@
 language: ruby
-
 env:
-	global:
-		- Company=Travis
-	matrix:
-		- Name=Kris
-		- Name=Dominic
-		- Name=Bianca
+  global:
+  - Company=Travis
+  matrix:
+  - Name=Kris
+  - Name=Dominic
+  - Name=Bianca
+  - secure: co/yDCa+bZ1XamQYLlSqMbRLlDyc6BvFwguiBsCXROQw6CIfnNk/hWWPC9vjmZBxxunRQ+YccGvkgvYeDVNZ89M6DDA3FFTOlHHv2eVXJk1j2A95QfBtRajAeUkO3vntd35b0NPLAQ3Fj5HxYRhz+0S37Sd0x/Jqmx0pMbg7VdWRuZPDdCHPJMdFgHrURpzAoQClKnVJ8wq0HqsTjMrsfFDe1hH6DM/tyTHSC0YC8Hjv6+mKkBVIQEXviMDr+zJoJ5jlXRIkzgIWCW31Wv5s8Hp46sArUR9Hjb6dhdYcjtfmU8CxHqb0jUXCqx5PVbaOl8zETmTycBHjW0DRlHooSUw7/+nV5NLPp0IbEm2pm9YK+YZgQs4hb/qrJ5olu6PZYlsV8weNrNsGbIgNm2CWFN0fGXEzAg0dhbJyB6Qdcb2jueG9aBONIJF63K/aDiYUWv6c3zdsLizz5Ne7hp3eF0ZBSlEJCBsnaWE4TSlADwlgkf4laO9wSH+MGPebI7ArNuSyZhCF3kFM/Lcy1fJ4dP6Xovqt2JJfZRcco0ERdoJxxiTfkSzNuC34wwy+byZ4eeILQwP7yPMktBHeDeeGBDrZs+R946ZtOoXy1U9ZU5AVVCd9BnTP1WHLp/HmpLsyvOTKyOK4nTBGvUS/3C7/dquR/MdcApy53EJjcIJyl9w=
